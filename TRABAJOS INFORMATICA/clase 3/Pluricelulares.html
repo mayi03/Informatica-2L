@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluricelulares</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
+  />
+  <script 
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"></script>
+  <script 
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+    crossorigin="anonymous"></script>
+  <script 
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
+    crossorigin="anonymous"></script>
+    <style>
+        body{
+          width: 70%;
+          min-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+          font-family:Georgia, 'Times New Roman', Times, serif;
+          font-size: 120%;
+          display: grid;
+          gap: 20px;
+          grid-template-columns: 67% 33%;
+          grid-template-rows: auto;
+          grid-template-areas:
+          "h1 h1"
+          "imagen1 imagen1"
+          "texto1 texto1"
+          "texto2 texto2"
+          "ul1 ul1"
+          "h2 h2"
+          "texto3 texto3"
+          "ul2 imagen2"
+          "texto4 texto4"
+          "ul3 imagen3"
+          "h3 h3"
+          "texto5 texto5"
+          "h4 h4"
+          "h5 h5"
+          "texto6 texto6"
+          "texto7 imagen4"
+          "h6 h6"
+          "texto8 imagen6"
+          "h7 h7"
+          "texto9 texto9"
+          "imagen7 imagen7"
+          "h8 h8"
+          "texto10 texto10"
+          "ul4 ul4"
+          "h9 h9"
+          "texto11 texto11"
+          "h10 h10"
+          "texto12 texto12"
+          "h11 h11"
+          "texto13 texto13"
+          "ul5 ul5"
+          "h12 h12"
+          "texto14 texto14"
+          "h13 h13"
+          "texto15 texto15"
+          "ul6 ul6"
+          "table1 table1"
+          "a1 a1"
+        }
+        #h1{
+            grid-area: h1;
+            font-size: 300%;
+        }
+        #imagen1{
+            grid-area: imagen1;
+            width: 70vw;
+            position: relative;
+            left: 70%;
+            right: 70%;
+            /* viewport width */
+            margin-left: -50vw;
+            margin-right: -50vw;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto1{
+            grid-area: texto1;
+            text-align: justify;
+        }
+        #texto2{
+            grid-area: texto2;
+            text-align: justify;
+        }
+        #ul1{
+          grid-area: ul1;
+        }
+        #h2{
+            grid-area: h2;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #texto3{
+          grid-area: texto3;
+          text-align: justify;
+        }
+        #imagen2{
+            grid-area: imagen2;
+            width: 100%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #ul2{
+          grid-area: ul2;
+          text-align: justify;
+        }
+        #imagen3{
+            grid-area: imagen3;
+            width: 100%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #ul3{
+          grid-area: ul3;
+          text-align: justify;
+        }
+        #texto4{
+          grid-area: texto4;
+          text-align: justify;
+        }
+        #h3{
+            grid-area: h3;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #texto5{
+          grid-area: texto5;
+          text-align: justify;
+        }
+        #h4{
+            grid-area: h4;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+        }
+        #texto6{
+          grid-area: texto6;
+          text-align: justify;
+        }
+        #h5{
+            grid-area: h5;
+            font-size: 150%;
+            color: rgb(51, 101, 73);
+            border-bottom: black solid;
+        }
+        #imagen4{
+            grid-area: imagen4;
+            width: 100%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto7{
+          grid-area: texto7;
+          text-align: justify;
+        }
+        #imagen5{
+            grid-area: imagen5;
+            width: 100%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto8{
+          grid-area: texto8;
+          text-align: justify;
+        }
+        #h6{
+            grid-area: h6;
+            font-size: 150%;
+            color: rgb(51, 101, 73);
+            border-bottom: black solid;
+        }
+        #imagen6{
+            grid-area: imagen6;
+            width: 70%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #h7{
+            grid-area: h7;
+            font-size: 150%;
+            color: rgb(51, 101, 73);
+            border-bottom: black solid;
+        }
+        #texto9{
+          grid-area: texto9;
+          text-align: justify;
+        }
+        #imagen7{
+            grid-area: imagen7;
+            width: 100%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #h8{
+            grid-area: h8;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+        }
+        #texto10{
+          grid-area: texto10;
+          text-align: justify;
+        }
+        #ul4{
+          grid-area: ul4;
+        }
+        #h9{
+            grid-area: h9;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #texto11{
+          grid-area: texto11;
+          text-align: justify;
+        }
+        #h10{
+            grid-area: h10;
+            font-size: 150%;
+            color: rgb(51, 101, 73);
+            border-bottom: black solid;
+        }
+        #texto12{
+          grid-area: texto12;
+          text-align: justify;
+        }
+        #h11{
+            grid-area: h11;
+            font-size: 150%;
+            color: rgb(51, 101, 73);
+            border-bottom: black solid;
+        }
+        #texto13{
+          grid-area: texto13;
+          text-align: justify;
+        }
+        #ul5{
+          grid-area: ul5;
+        }
+        #h12{
+            grid-area: h12;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #texto14{
+          grid-area: texto14;
+          text-align: justify;
+        }
+        #h13{
+            grid-area: h13;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #texto15{
+          grid-area: texto15;
+          text-align: justify;
+        }
+        #ul6{
+          grid-area: ul6;
+        }
+        #table1{
+          grid-area: table1;
+          text-align: center;
+        }
+        #a1{
+            grid-area: a1;
+        }
+    </style>
+</head>
+<body>
+  <h1 id="h1"
+  style="
+    color: rgb(51, 101, 73);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  "
+>
+  ORGANISMO PLURICELULAR
+  </h1>
+  <div id="texto1">
+    <p>Un organismo pluricelular o multicelular es aquel que está constituido por dos o más células, en contraposición a los organismos unicelulares (protistas y bacterias, entre muchos otros), que reúnen todas sus funciones vitales en una única célula.</p>
+    <p>Los organismos pluricelulares o multicelulares –como plantas, animales y algas pardas– surgen de una sola célula la cual se multiplica generando un organismo. Las células de los organismos multicelulares están diferenciadas para realizar funciones especializadas y se reproducen mediante mitosis y meiosis. Para formar un organismo multicelular, estas células necesitan identificarse y unirse a las otras células. Los organismos multicelulares tienen uniones celulares permanentes, es decir, las células han perdido su capacidad de vivir solas, requieren de la asociación, pero esta debe darse de tal manera que desemboque en diferentes tipos celulares que generan organización celular en tejidos, órganos y sistemas, para así conformar un organismo completo.1​ Los organismos pluricelulares son el resultado de la unión de individuos unicelulares a través de formación de colonias, filamentos o agregación. La multicelularidad ha evolucionado independientemente en Volvox y algunas algas verdes flageladas.</p>
+    <p>Un conjunto de células diferenciadas de manera similar que llevan a cabo una determinada función en un organismo multicelular se conoce como un tejido. No obstante, en algunos microorganismos unicelulares, como las mixobacterias o algunos microorganismos que forman biopelículas, se encuentran células diferenciadas, aunque la diferenciación es menos pronunciada que la que se encuentra típicamente en organismos multicelulares.</p>
+  </div>
+  <img src="https://concepto.de/wp-content/uploads/2019/04/celularizacion-e1554223066450.jpg" alt="Pluricelular" id="imagen1">
+  <div id="texto2">
+    <p>Los organismos multicelulares deben afrontar el problema de regenerar el organismo entero a partir de células germinales, objeto de estudio por la biología del desarrollo. La organización espacial de las células diferenciadas como un todo lo estudia la anatomía.</p>
+    <p>Los organismos multicelulares pueden sufrir cáncer, cuando falla la regulación del crecimiento de las células dentro del marco de desarrollo normal. Los ejemplos de organismos multicelulares son muy variados, y pueden ir desde un hongo a un árbol o un animal:</p>
+  </div>
+  <ul id="ul1">
+    <li>Metazoos:</li>
+      <ul>
+        <li>Animales</li>
+      </ul>
+    <li>Planatas y algas:</li>
+      <ul>
+        <li> <a href="https://es.wikipedia.org/wiki/Streptophyta">Streptophyta</a> (Plantas y algas verde)</li>
+        <li> <a href="https://es.wikipedia.org/wiki/Chlorophytina">Chlorophytina</a> (Algas verdes)</li>
+        <li> <a href="https://es.wikipedia.org/wiki/Rhodophytina">Rhodophytina</a> (Algas rojas)</li>
+        <li> <a href="https://es.wikipedia.org/wiki/Phaeophyceae">Phaeophyceae</a> (Algas pardas)</li>
+      </ul>
+    <li>Hongos y mohos</li>
+      <ul>
+        <li>Fungi (Hongos)</li>
+        <li>Pseudofungi (oomicetos e hipoquitridiomicetos)</li>
+        <li>Myxomycota (Mixomicetos)</li>
+        <li>Acrasida</li>
+        <li>Labyrinthulea (Mohos reticulares)</li>
+        <li>Fonticulida</li>
+      </ul>
+  </ul>
+  <h2 id="h2">
+    CARACTERÍSTICAS
+  </h2>
+  <div id="texto3">
+    <p>Los organismos pluricelulares se caracterizan por:</p>
+  </div>
+  <img src="https://www.ecured.cu/images/e/e9/Organismos_pluricelulares.jpg" alt="Caracteristicas" id="imagen2">
+  <ul id="ul2">
+    <li>ADERENCIA CELULAR Y COMUNICACIÓN CELULAR: esto incluye el desarrollo de moléculas de adhesión (selectinas, integrinas, caderinas), uniones (adherentes, estrechas, gap), moléculas de comunicación (hormonas, receptores), entre otras.
+    </li>
+    <li>COOPERACIÓN Y ESPECIALIZACIÓN CELULAR: incluyendo la división de funciones bioquímicas, la especialización de células para el contacto con el entorno y la separación entre célula somática y célula germinal.
+    </li>
+    <li>Unidad de selección y adecuación compartida.</li>
+    <li>REDES COMPLEJAS DE FACTOR DE TRANSCRIPCIÓN: por ejemplo la duplicación de genes HOX, MADS o Policomb.
+    </li>
+  </ul>
+  <img src="https://diferenciando.com/wp-content/uploads/2019/10/2.jpg" alt="Organismos_pluricelulares" id="imagen3">
+  <div id="texto4">
+    <p>Existen varios mecanismos por los cuales la multicelularidad podría haber evolucionado:</p>
+  </div>
+  <ul id="ul3">
+    <li>Un grupo de células se agregaron en una masa con forma de babosa llamada grex, la cual se trasladó como una unidad multicelular, como la hacen los Myxomycota.</li>
+    <li>La célula primitiva sufrió una división incompleta del núcleo celular generando una célula con múltiples núcleos o sincitio. A continuación, se formaron membranas alrededor de cada núcleo y el espacio fue ocupado por organelos. Esto resultó en un grupo de células conectadas en un organismo, mecanismo observable en Drosophila.</li>
+    <li>Las células hijas no separaron después de la división celular, resultado una conglomeración de células idénticas en un organismo, que más tarde desarrollaron funciones especializadas. Esto se observa en embriones de plantas, animales y cianoflagelados coloniales.</li>
+  </ul>
+  <h2 id="h3">
+    ORIGEN Y EVOLUCIÓN
+  </h2>
+  <div id="texto5">
+    <p>La multicelularidad ha evolucionado de forma independiente decenas de veces en la historia de la Tierra. Los principales linajes de eucariontes como plantas, animales y algas tienen orígenes independientes con ancestros de más de 1,000 millones de años. En Myxomycota, algas verdes y rojas la multicelularidad ha aparecido repetidamente dentro del grupo.</p>
+    <p>Debido a que los primeros organismos multicelulares fueron simples y suaves sin huesos, concha o partes duras del cuerpo, no están bien conservados en el registro fósil. Una excepción pueden ser las Demospongiae, que pueden haber dejado una huella química en rocas antiguas . Los primeros fósiles de organismos multicelulares incluyen la controvertida Grypania spiralis y los fósiles de las pizarras negras de la formación Paleoproterozoica "Francivillian grupo B" en Gabón.</p>
+    <p>Hasta hace poco tiempo la reconstrucción filogenética se ha basado en similitudes anatómicas, particularmente embriológicas. Esto es inexacto, ya que los organismos vivos pluricelulares como los animales y las plantas, se separaron de sus ancestros unicelulares hace más de 500 millones de años. El paso del tiempo ha permitido a la evolución divergente y convergente acumular diferencias y homoplasias entre las especies modernas y las ancestrales extintas. La filogenética moderna utiliza técnicas sofisticadas de análisis genético (por ejemplo aloenzimas, ADN satélite y otros marcadores moleculares) para describir los rasgos compartidos entre linajes alejados.</p>
+  </div>
+  <h2 id="h4">
+    TEORIAS:
+  </h2>
+  <div id="texto6">
+    <p>Existen tres principales teorías para la evolución de la pluricelularidad: simbótica, de celularización y colonial.</p>
+  </div>
+  <h2 id="h5">
+    La teoria endosimbiotica
+  </h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Endosimbiosis.jpg" alt="endosimbiotica" id="imagen4">
+  <div id="texto7">
+    <p>Esta teoría sugiere que los primeros organismos multicelulares fueron producidos a partir de simbiosis (cooperación) de diferentes especies de organismos unicelulares, cada uno con diferentes funciones. Con el tiempo, estos organismos se vuelven tan dependientes el uno del otro, que no serían capaces de sobrevivir por sí mismos, llevando eventualmente a la incorporación de su genoma en un organismo multicelular. Cada organismo original se convertiría en un linaje de células diferenciadas dentro de la especie de nueva creación.</p>
+    <p>Este tipo de simbiosis codependiente se puede ver con frecuencia, como en la relación entre el Amphiprioninae y Heteractis magnifica. En estos casos, es muy dudoso que cualquiera de las especies pueda sobrevivir mucho tiempo si la otra se extingue. Sin embargo, el problema con esta teoría es que todavía no se sabe cómo el ADN de cada organismo se podría incorporar en un solo genoma para constituirse en una sola especie. En teoría este tipo de simbiosis ya ocurrido (por ejemplo, mitocondria y cloroplastos en las células animales y vegetales –endosimbiosis–), pero esto ha ocurrido solo en muy raras ocasiones; y aun así, los genomas de los endosimbiontes han conservado una distinción, replicando su ADN por separado durante la mitosis de las especies huésped. Por ejemplo, los dos o tres organismos simbióticos que forma el compuesto liquen, mientras que dependen unos de otros para la supervivencia, tiene que reproducirse por separado y luego volver a la reorganizarse para crear un organismo individual una vez más.</p>
+  </div>
+  <h2 id="h6">
+    La teoría de la celularización
+  </h2>
+  <div id="texto8">
+    <p>Esta teoría establece que un solo organismo unicelular, con múltiples núcleos, podría haber desarrollado particiones en la membrana interna alrededor de cada uno de sus núcleos. Muchos protistas, como Ciliophora o moho mucilaginoso puede tener varios núcleos, apoyando esta hipótesis. Sin embargo, la simple presencia de múltiples núcleos no es suficiente para apoyar la teoría. Los núcleos múltiples de ciliados son diferentes y tienen claras las funciones diferenciadas: el macronúcleo sirve a las necesidades del organismo, mientras que el micronúcleo se utiliza para la reproducción parecida a la sexual en el intercambio de material genético. Los sincitios de mohos mucilaginosos se forman de células ameboides individuales, como los tejidos sincitiales de algunos organismos multicelulares y no al revés. Para ser considerada válida, esta teoría necesita un ejemplo demostrable y el mecanismo de generación de un organismo multicelular de un sincitio pre-existente.</p>
+  </div>
+  <img src="https://www.monografias.com/trabajos36/origen-animales/Image6902.jpg" alt="teoria2" id="imagen6">
+  <h2 id="h7">
+    La teoria colonial
+  </h2>
+  <div id="texto9">
+    <p>La tercera explicación de multicelularizacion es la teoría colonial propuesta por Ernst Haeckel en 1874. Esta teoría propone la simbiosis entre muchos organismos de una misma especie (a diferencia de la teoría simbiótica, que sugiere la simbiosis de diferentes especies) condujo a un organismo multicelular. Se presume que algunos organismos multicelulares evolucionaron en la tierra a partir de células que se separan y luego reincorporan (por ejemplo moho mucilaginoso). Para la mayoría de los tipos multicelulares que se desarrollaron dentro de ambientes acuáticos, la multicelularidad se produce como consecuencia de que las células no se separan siguiendo la división. El mecanismo de formación de colonias de este último puede ser tan simple como la incompleta citocinesis, aunque la multicelularidad involucra típicamente la diferenciación celular.</p>
+    <p>La ventaja de la teoría colonial es que se ha visto que se produzca de forma independiente en diferentes protistas . Por ejemplo, durante la escasez de alimentos, la ameba Dictyostelium se une en una colonia que se mueve como un individuo a una nueva ubicación. Algunas de estas amebas, se diferencian en tipos especializados. Otros ejemplos de organización colonial en protista son Volvocaceae, tales como Eudorina y Volvox, el último de los cuales se compone de hasta 500-50.000 células (dependiendo de la especie), solo una fracción de los cuales se reproducen. Por ejemplo, en una especie de 25-35 células se reproducen 8 asexualmente y alrededor de 15 -25 sexualmente. Sin embargo, a menudo puede ser difícil separar protistas coloniales de verdaderos organismos multicelulares. Como los dos conceptos no son distintos los protistas coloniales se conocen como "pluricelulares" en lugar de "multicelulares". Este problema afecta a la mayoría de las hipótesis de cómo se originó la multicelularidad.</p>
+  </div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/ColonialFlagellateHypothesis.png/975px-ColonialFlagellateHypothesis.png" alt="teoria3" id="imagen7">
+  <h2 id="h8">
+    VENTAJAS
+  </h2>
+  <div id="texto10">
+    <p>La pluricelularidad confiere ciertas ventajas dependiendo del entorno, por ejemplo:</p>
+  </div>
+  <ul id="ul4">
+    <li>Protección contra la depredación.</li>
+    <li>Incremento en las reservas almacenadas cuando los nutrientes son limitados.</li>
+    <li>Ampliación de las oportunidades de alimentación</li>
+    <li>Generación de un ambiente interno protegido por una capa externa de células.</li>
+    <li>Cooperación metabólica o nuevas oportunidades de vías metabólicas.</li>
+    <li>Mejorar la movilidad para la dispersión o la búsqueda de alimento</li>
+    <li>Especialización funcional y división del trabajo.</li>
+  </ul>
+  <h2 id="h9">
+    COOPERACIÓN Y CONFLICTOS
+  </h2>
+  <div id="texto11">
+    <p>La multicelularidad implica el compartir recursos entre un grupo de células, el engaño surge de la competencia por los beneficios derivados de este proceso. El surgimiento de células traicioneras, que tomen recursos sin dar a cambio, puede afectar a la colectividad. El engaño y la restricción de las trampas son cuestiones fundamentales en la teoría evolutiva. Una herramienta que se ha utilizado para su estudio es la teoría de juegos.</p>
+  </div>
+  <h2 id="h10">
+    Conflictos
+  </h2>
+  <div id="texto12">
+    <p>Los organismos pluricelulares pueden originarse por división incompleta, creando un organismo clona, o por agregación, donde las células tienen conformaciones genéticas diferentes. La teoría de selección de parentesco predice que se favorecerán las interacciones con parientes. En las interacciones célula-linaje, cuando existe un costo de cooperación, las células mutantes no cooperativas pueden tener ventaja sobre las cooperativas. Ejemplo de esto es el cáncer. Sin embargo, muchos organismos pluricelulares interaccionan con células de diferente conformación genética e incluso de otras especies, como es el caso de los simbiontes.</p>
+  </div>
+  <h2 id="h11">
+    Mecanismo de control
+  </h2>
+  <div id="texto13">
+    <p>Se han desarrollado múltiples mecánismos para el control de la traición en organismos multicelulares, algunos de estos son:</p>
+  </div>
+  <ul id="ul5">
+    <li>Los cuellos de botella unicelulares y secuestro de la línea germinal, esto se logra a partir de la separación de la línea germinal o la generación de propágulos unicelulares. Sirve para garantizar la similitud genética. Células no cooperativas, aunque logren reproducirse, serán incapaces de cooperar con su descendencia para generar un organismo multicelular.</li>
+    <li>Reconocimiento propio y vigilancia, esto incluye una serie de marcadores y señales que censan la relación entre diferentes células y permiten detectar y eliminar traidores.</li>
+    <li>Muerte Celular Programada y apoptosis.</li>
+    <li>Control materno en el desarrollo temprano.</li>
+    <li>Control de la migración: esto mantiene a las células no cooperativas juntas, mitigando los efectos negativos de la interacción con células cooperativas.</li>
+  </ul>
+  <h2 id="h12">
+    REVERSIÓN DE LA PLURICELULARIDAD
+  </h2>
+  <div id="texto14">
+    <p>En la naturaleza igualmente se conoce procesos de reversión de la pluricelularidad. Ejemplo de ello serían los mixozoos, los cuales equivocadamente fueron clasificados durante mucho tiempo como protozoos dentro de los esporozoos (con el nombre de Myxosporidia); no obstante, al irse conociendo detalles genéticos sobre su naturaleza, actualmente se postula que provendrían de la evolución de animales pluricelulares, más específicamente de alguna especie de cnidario, la cual habría simplificado su estructura como adaptación al parasitismo.</p>
+  </div>
+  <h2 id="h13">
+    PLURICELULARIDAD EN LOS DISTINTOS GRUPOS DE EUCARIOTAS
+  </h2>
+  <div id="texto15">
+    <p>En Eukarya ha aparecido varias veces la pluricelularidad en sus diversos grados en grupos filogenéticamente muy dispares. Algunos taxones son esencialmente pluricelulares mientras que otros contienen tanto especies unicelulares como coloniales y pluricelulares. En la tabla de abajo se utilizan las siguientes definiciones:</p>
+  </div>
+  <ul id="ul6">
+    <li>UNICELULAR
+      <p>Aquel organismo que se presenta durante todo su ciclo de vida como una única célula.</p>
+    </li>
+    <li>COLONIAL
+      <p>Formados por la asociación de células idénticas.</p>
+    </li>
+    <li>MULTICELULAR O PLURICELULAR
+      <p>Aquellos que presentan a lo largo de su ciclo de vida al menos una etapa compuesta de células de diferente tipo. Se pueden dividir en dos subtipos:</p>
+      <ul>
+        <li>SIMPLE: Presentan una comunicación celular básica y reducida, con un pequeño número de tipos de células, usualmente dos, somáticas para la formación del cuerpo y germinales para la reproducción. A su vez pueden clasificarse en:</li>
+        <ul>
+          <li>AGERGATIVOS:Estos organismos aparecen durante parte de su ciclo de vida como unicelulares, hasta que un cierto estímulo produce la agregación de células genéticamente diferentes y posteriores subdivisiones.</li>
+          <li>NO AGREGATIVOS: Son el resultado de la cohesión de las células resultantes de la división de una célula madre o alternativamente de unas pocas células.</li>
+        </ul>
+      </ul>
+    </li>
+    <li>COMPLEJO: Implica comunicaciones intercelulares complejas y células de numerosos tipos.</li>
+  </ul>
+  <table id="table1" class="table table-bordered">
+    <tr>
+      <th>Supergrupo</th>
+      <th>Grupo</th>
+      <th>Unicelular</th>
+      <th>Colonial</th>
+      <th colspan="3">Pluricelular</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Agregativo</th>
+      <th>No agreg.</th>
+      <th>Complejo</th>
+    </tr>
+    <tr>
+      <td rowspan="4">Archaeplastida</td>
+      <td>Glaucophyta</td>
+      <td>Si</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+  </tr>
+  <tr>
+    <td>Rhodophyta</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>Si</td>
+  </tr>
+  <tr>
+    <td>Chlorophyta	</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Streptophyta</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>Si</td>
+  </tr>
+  <tr>
+    <td rowspan="9">Supergrupo SAR</td>
+    <td>Ochrophyta</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>Si</td>
+  </tr>
+  <tr>
+    <td>Pseudofungi</td>
+    <td>Si</td>
+    <td>si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Bigyra</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Ciliophora</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Dinoflagellata</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Apicomplexa</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Radiolaria</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Foraminifera</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Cercozoa</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Excavata</td>
+    <td>Discoba</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Metamonada</td>
+    <td>Si</td>
+    <td>si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td rowspan="5">Amoebozoa</td>
+    <td>Discosea</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Tubulinea</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Myxomycota</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Archamoebea</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Variosea</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td rowspan="6">Opisthokonta</td>
+    <td>Mesomycetozoea</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Metazoa</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Si</td>
+  </tr>
+  <tr>
+    <td>Choanoflagellatea</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Nucleariida</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Cryptomycota</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Eumycota</td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>Si</td>
+    <td>Si</td>
+  </tr>
+  <tr>
+    <td rowspan="1">Hacrobia</td>
+    <td></td>
+    <td>Si</td>
+    <td>Si</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  </table>
+  <a href="index.html" id="a1">Haga click aqui para regresar a la pagina de animalia.</a>
+</body>
+</html>

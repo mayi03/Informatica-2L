@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eucariotas</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script 
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+      crossorigin="anonymous"></script>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" 
+      crossorigin="anonymous"></script>
+    <script 
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" 
+      crossorigin="anonymous"></script>
+      <style>
+        body{
+          width: 70%;
+          min-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+          font-family:Georgia, 'Times New Roman', Times, serif;
+          font-size: 120%;
+          display: grid;
+          gap: 20px;
+          grid-template-columns: 67% 33%;
+          grid-template-rows: auto;
+          grid-template-areas:
+          "h1 h1"
+          "imagen1 imagen1"
+          "texto1 h2"
+          "texto1 imagen2"
+          "h3 h3"
+          "texto2 imagen3"
+          "texto2 h4"
+          "texto2 ol1"
+          "h5 h5"
+          "texto3 imagen4"
+          "texto3 ul1"
+          "h6 h6"
+          "texto4 texto4"
+          "ul2 imagen5"
+          "texto5 texto5"
+          "h7 h7"
+          "texto6 imagen6"
+          "texto7 imagen6"
+          "ul3 ul3"
+          "texto8 texto8"
+          "h8 h8"
+          "texto9 texto9"
+          "h9 imagen7"
+          "texto10 imagen7"
+          "texto10 ul4"
+          "h10 ul4"
+          "texto11 imagen8"
+          "texto12 texto12"
+          "a1 a1"
+
+        }
+        #h1{
+            grid-area: h1;
+            font-size: 300%;
+        }
+        #imagen1{
+            grid-area: imagen1;
+            width: 70vw;
+            position: relative;
+            left: 70%;
+            right: 70%;
+            /* viewport width */
+            margin-left: -50vw;
+            margin-right: -50vw;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto1{
+            grid-area: texto1;
+            text-align: justify;
+        }
+        #h2{
+            grid-area: h2;
+            font-size: 250%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #imagen2{
+            grid-area: imagen2;
+            width: 100%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto2{
+            grid-area: texto2;
+            text-align: justify;
+        }
+        #imagen3{
+            grid-area: imagen3;
+            width: 95%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #h3{
+            grid-area: h3;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: solid black;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #h4{
+            grid-area: h4;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #ol1{
+            grid-area: ol1;
+            text-align: justify;
+        }
+        #h5{
+            grid-area: h5;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #texto3{
+            grid-area: texto3;
+            text-align: justify;
+        }
+        #imagen4{
+            grid-area: imagen4;
+            width: 100px;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #ul1{
+            grid-area: ul1;
+        }
+        #h6{
+            grid-area: h6;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #texto4{
+            grid-area: texto4;
+            text-align: justify;
+        }
+        #ul2{
+            grid-area: ul2;
+            text-align: justify;
+        }
+        #imagen5{
+            grid-area: imagen5;
+            width: 325px;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto5{
+            grid-area: texto5;
+            text-align: justify;
+        }
+        #h7{
+            grid-area: h7;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #texto6{
+            grid-area: texto6;
+            text-align: justify;
+        }
+        #imagen6{
+            grid-area: imagen6;
+            width: 90%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto7{
+            grid-area: texto7;
+            text-align: justify;
+        }
+        #ul3{
+            grid-area: ul3;
+            text-align: justify;
+        }
+        #texto8{
+            grid-area: texto8;
+            text-align: justify;
+        }
+        #h8{
+            grid-area: h8;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+            border-bottom: black solid;
+            background-color: rgb(182, 204, 191);
+            text-align: center;
+        }
+        #imagen7{
+            grid-area: imagen7;
+            width: 100%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto9{
+            grid-area: texto9;
+            text-align: justify;
+        }
+        #h9{
+            grid-area: h9;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+        }
+        #texto10{
+            grid-area: texto10;
+            text-align: justify;
+        }
+        #ul4{
+            grid-area: ul4;
+            text-align: justify;
+            font-size: 75%;
+        }
+        #h10{
+            grid-area: h10;
+            font-size: 150%;
+            color: rgb(154, 122, 122);
+        }
+        #texto11{
+            grid-area: texto11;
+            text-align: justify;
+        }
+        #imagen8{
+            grid-area: imagen8;
+            width: 110%;
+            border: rgb(51, 101, 73) solid 4px;
+        }
+        #texto12{
+            grid-area: texto12;
+            text-align: justify;
+        }
+        #a1{
+            grid-area: a1;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1"
+      style="
+        color: rgb(51, 101, 73);
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      "
+    >
+      EUCARIOTA
+    </h1>
+    <img src="https://i.pinimg.com/originals/7a/b1/3b/7ab13b91aee2a04adf9c5550bf34faa7.png" alt="Eucariota" id="imagen1">
+    <div id="texto1">
+        <p>En biología y taxonomía, Eukaryota o Eukarya (palabras con etimología del griego: εὖ eu —‘bueno’, ‘bien’— y κάρυον karyon —‘nuez’, ‘carozo’, ‘núcleo’—) es el dominio (o imperio) que incluye los organismos formados por células con núcleo verdadero. La castellanización adecuada del término es eucariota o eucarionte. Estos organismos constan de una o más células eucariotas, abarcando desde organismos unicelulares hasta verdaderos pluricelulares en los que las diferentes células se especializan para diferentes tareas y que, en general, no pueden sobrevivir de forma aislada.</p>
+        <p>Pertenecen al dominio o imperio eucariota los reinos de los animales, plantas y hongos, así como varios grupos incluidos en el parafilético reino Protista. Todos ellos presentan semejanzas a nivel molecular (estructura de los lípidos, proteínas y genoma), comparten un origen común, y principalmente, comparten el plan corporal de los eucariotas, muy diferente al de procariotas.</p>
+        <p>Con excepción de algunos organismos unicelulares, el ciclo de vida eucariota alterna una fase haplonte y otra diplonte, que se consigue mediante la alternancia de meiosis y fecundación, procesos que dan células haplontes y diplontes respectivamente.</p>
+    </div>
+    <h2 id="h2">
+        EUCARIOTA
+    </h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Eukaryota_diversity_2.jpg/375px-Eukaryota_diversity_2.jpg" alt="animales" id="imagen2">
+    <div id="texto2">
+        <p>Las células eucariotas son generalmente mucho más grandes que las procariotas y están mucho más compartimentadas. Poseen una gran variedad de membranas con núcleo rodeado de la envoltura nuclear, retículo endoplasmático y aparato de Golgi, además de mecanismos para la gemación y fusión de vesículas, incluida la exocitosis y endocitosis. Estructuras internas llamadas orgánulos se encargan de realizar funciones especializadas dentro de la célula. Presencia de lisosomas, peroxisomas y mitocondrias.</p>
+        <p>También caracteriza a todos los eucariotas un esqueleto interno o endoesqueleto, en este caso llamado citoesqueleto, formado por dos entramados de proteínas: el sistema de microtúbulos y el sistema contráctil de actina/miosina, que desempeñan un papel importante en la definición de la organización y forma de la célula, en el tráfico intracelular (por ejemplo, los movimientos de vesículas y orgánulos) y en la división celular. El característico flagelo eucariota y sus motores moleculares asociados se encuentran anclados al citoesqueleto.</p>
+        <p>El ADN de las células eucariotas está contenido en un núcleo celular separado del resto de la célula por una doble membrana permeable. El material genético se divide en varios bloques lineales llamados cromosomas, que son separados por un huso microtubular durante la división nuclear. Los cromosomas contienen histonas, varios replicones, centrómeros y telómeros. Hay un característico ciclo celular con segregación mitótica y reproducción sexual por meiosis. Se incluye un complejo de poros nucleares, transporte trans-membranal de ARN y proteínas a través de la envoltura nuclear, intrones y nuevos patrones de procesamiento del ARN utilizando espliceosomas.</p>
+        <p>Para una comparación con las características procariotas, véase: Tabla comparativa.</p>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Biological_cell.svg/525px-Biological_cell.svg.png" alt="Parteseucariota" id="imagen3">
+    <h3 id="h3">
+        ESTRUCTURA CELULAR:
+    </h3>
+    <h4 id="h4">
+        Esquema de una célula típica eucariota animal:
+    </h4>
+    <ol id="ol1">
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Nucl%C3%A9olo">Nucleolo</a> con <a href="https://es.wikipedia.org/wiki/Cromosoma">cromosomas</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/N%C3%BAcleo_celular">Nucleo</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Ribosoma">Ribosoma</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Ves%C3%ADcula_(biolog%C3%ADa_celular)"> Vesícula</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Ret%C3%ADculo_endoplasm%C3%A1tico_rugoso">Reticolo edoplasmatico rugoso</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Aparato_de_Golgi">Aparato de golgi</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Microt%C3%BAbulo">Microtúbulos</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Ret%C3%ADculo_endoplasm%C3%A1tico_liso">Retículo endoplasmático liso</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Mitocondria">Mitocondria</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Vacuola">Vacuola</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Citoplasma">Citoplasma</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Lisosoma">Lisosoma</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Centriolo">Centriolo</a>
+        </li>
+    </ol>
+    <h5 id="h5">
+        PLAN CORPORAL:
+    </h5>
+    <div id="texto3">
+        <p>La célula eucariota debe en gran parte su forma y capacidad de movimiento al citoesqueleto, ya que le otorga rigidez y flexibilidad. En los organismos flagelados ancla los flagelos al resto de la célula y permite su batido durante la locomoción o para la creación de corrientes de agua que le lleven el alimento. En los organismos ameboides permite la extensión de "pies" o seudópodos para la locomoción o la alimentación. También fija los surcos de alimentación de los excavados y el complejo apical que permite a los apicomplejos entrar en las células parasitadas.</p>
+        <p>Solo después de desarrollar su citoesqueleto pudo el eucariota ancestral realizar la fagocitosis, ya que es este el que, mediante crecimiento diferencial de sus fibras, logra que la célula se deforme para que la fagocitosis ocurra. La fagocitosis es también una propiedad ancestral de los eucariotas, si bien se ha perdido en grupos que se adaptaron a otras formas de alimentación. Hongos y plantas perdieron esta capacidad al desarrollar una pared celular rígida externa a la célula, pero ya contaban con otros modos de nutrición, la saprotrofia o el parasitismo en hongos y la fotosíntesis en plantas.</p>
+        <p>La mitocondria, derivada de la fagocitosis y posterior simbiogénesis de una proteobacteria, permitió al eucariota ancestral la respiración aerobia y con ello aprovechar al máximo la energía contenida en la materia orgánica. Como no es sorprendente en la evolución de un carácter tan antiguo, en varios grupos la mitocondria ha perdido esa capacidad ancestral y a cambio se ha modificado para cumplir otras funciones. También proceden de un evento de endosimbiosis los cloroplastos, en este caso con una cianobacteria, que permiten a las plantas realizar la fotosíntesis. Posteriormente otros grupos de eucariotas consiguieron sus cloroplastos mediante la endosimbiosis secundaria con un alga verde o roja.</p>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Exocytosis_types.svg/338px-Exocytosis_types.svg.png" alt="Plancorporal">
+    <ul id="ul1">
+        <li>Mediante el mecanismo de la exocitosis la célula eucariota dirige vesículas secretoras a la membrana citoplasmática. Estas vesículas contienen proteínas de membrana y lípidos que son enviadas para convertirse en componentes de la membrana, así como proteínas solubles para ser secretadas al exterior.</li>
+    </ul>
+    <h6 id="h6">
+       REPRODUCCIÓN: 
+    </h6>
+    <div id="texto4">
+        <p>Además de la división asexual de las células (mitosis), la mayoría de los eucariontes tiene algún proceso de reproducción sexual basado en la meiosis que no se encuentra entre los procariontes. La reproducción de los eucariontes típicamente implica la existencia de una fase haploide, donde está presente solamente una copia de cada cromosoma en las células, y diploide, donde están presentes dos. Las células diploides surgen por fusión nuclear (fecundación) y las haploides, por meiosis. En los organismos multicelulares, se distinguen tres tipos de ciclos biológicos:</p>
+    </div>
+    <ul id="ul2">
+        <li>CICLO HAPLONTE:</li>
+            <p>los organismos que presentan este ciclo son haploides durante su fase adulta. El cigoto es diploide y la meiosis tiene lugar tras la fecundación.</p>
+        <li>CICLO DIPLONTE:</li>
+            <p>los individuos maduros son diploides y forman gametos haploides por meiosis, que se fusionan para dar lugar a un nuevo organismo diploide.</p>
+        <li>CICLO HAPLODIPLONTE:</li>
+            <p>se produce alternancia de generaciones entre individuos haploides y diploides.</p>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Mitosis-fluorescent.jpg" alt="Reproducción" id="imagen5">
+    <div id="texto5">
+        <p>Los organismos unicelulares pueden reproducirse asexualmente por bipartición, gemación o esporulación y sexualmente mediante gametos o por conjugación.</p>
+        <p>En los eucariontes, la relación de superficie frente a volumen es más pequeña que los procariontes, y así tienen tasas metabólicas más bajas y tiempos de generación más largos.</p>
+    </div>
+    <h6 id="h7">
+        ORIGEN
+    </h6>
+    <div id="texto6">
+        <p>El origen de la célula eucariota es el proceso biológico más revolucionario desde el origen de la vida desde varios puntos de vista, como es el caso de la morfología, desarrollo evolutivo, estructura genética, relaciones simbióticas y ecología. Todas las células complejas son de este tipo y constituyen la base de casi todos los organismos pluricelulares. Aunque no hay acuerdo sobre cuándo se han originado los eucariotas, en general se sugerido hace unos 2309 millones de años.​ Aunque también se ha propuesto en 1800 Ma, sin embargo es controversial. Hasta ahora los fósiles más antiguos que pueden considerarse eucariotas son de 2100 millones de años y se les conoce como biota francevillense los cuales representan los primeros indicios de vida pluricelular. La separación entre los eucariotas y su grupo hermano las arqueas Asgard se estimó a finales del Arcaico (periodo Neoarcaico).</p>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Tree_of_Living_Organisms_2.png/360px-Tree_of_Living_Organisms_2.png" alt="Origen">
+    <div id="texto7">
+        <p>Eukarya se relaciona con Archaea desde el punto de vista del ADN nuclear y de la maquinaria genética, y ambos grupos son clasificados a veces juntos en el clado Neomura. Desde otros puntos de vista, tales como por la composición de la membrana, se asemejan más a Bacteria. Se han propuesto para ello tres posibles explicaciones principales:</p>
+    </div>
+    <ul id="ul3">
+        <li>Los eucariontes resultaron de la fusión completa de dos o más células, el citoplasma procedente de una bacteria y el núcleo de una arquea.</li>
+        <li>Los eucariontes se desarrollaron de las arqueas y adquirieron sus características bacterianas a partir de las proto-mitocondrias.</li>
+        <li>Los eucariontes y las arqueas se desarrollaron independientemente a partir de una bacteria modificada.</li>
+    </ul>
+    <div id="texto8"> 
+        <p>Cada vez son mayores las evidencias que parecen demostrar que el origen eucariota es producto de la fusión de una arquea y una bacteria. Mientras el núcleo celular tiene elementos genéticos relacionados con las arqueas, las mitocondrias y la membrana celular tienen características bacterianas. La fusión genética es más evidente al constatar que los genes informativos parecen de origen arqueano y los genes operacionales de origen bacteriano. En todo caso también es cierto que un cierto número de rasgos presentes exclusivamente en los eucariontes son difíciles de explicar por medio de un evento de fusión.</p>
+        <p>ampoco está claro el retraso de mil millones de años entre el origen de los eucariotas y su diversificación, pues las bacterias dominaron la biosfera hasta hace unos 800 millones de años. Este intervalo de estabilidad ambiental, litosférica y evolutiva se conoce con el nombre de "boring billion" (aburridos mil millones de años). Este retraso quizá se debiera simplemente a la dificultad de introducción en una biosfera ocupada enteramente por los procariotas. Otras explicaciones están relacionadas con la lenta evolución de los eucariotas o con el aumento del oxígeno, que no alcanzó los niveles ideales para los eucariotas hasta el final de dicho período. El diseño compartimentado de la célula eucariota es el más adecuado para el metabolismo aerobio y es comúnmente aceptado que todos los eucariotas actuales, incluidos los anaerobios, descienden de antecesores aerobios con mitocondrias.</p>
+    </div>
+    <h6 id="h8">
+        EVOLUCIÓN
+    </h6>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Endosymbiosis.PNG/480px-Endosymbiosis.PNG" alt="evolución" id="imagen7">
+    <div id="texto9">
+        <p>Algún tiempo después de que surgiera la primera célula eucariota se produjo una radiación explosiva que las llevó a ocupar la mayoría de los nichos ecológicos disponibles.</p>
+    </div>
+    <h6 id="h9">
+        Evolución unicelular.
+    </h6>
+    <div id="texto10">
+        <p>La primera célula eucariota era probablemente flagelada, aunque con tendencias ameboides al no tener una cubierta rígida. Desde el antecesor flagelado, algunos grupos perdieron ulteriormente los flagelos, mientras que otros se convirtieron en multiflagelados o ciliados. Cilios y flagelos (incluidos los que tienen los espermatozoides) son estructuras homólogas con nueve dobletes de microtúbulos que se originan a partir de los centriolos. </p>
+        <p>El carácter ameboide surgió varias veces a lo largo de la evolución de los protistas dando lugar a los diversos tipos de seudópodos de los distintos grupos. El que los ameboides procedan de los flagelados y no al revés, como se pensaba en el pasado, tiene como base estudios moleculares (fusión, partición o duplicación de genes, inserción o borrado de intrones, etc.).</p>
+        <p>Está generalmente aceptado que los cloroplastos se originaron por endosimbiosis de una cianobacteria y que todas las algas eucariotas evolucionaron en última instancia de antepasados heterótrofos. Se piensa que la diversificación primaria de la célula eucariota tuvo lugar entre los zooflagelados: células predadoras no fotosintéticas con uno o más flagelos para nadar, y a menudo también para generar corrientes de agua con las que capturar a las presas.</p>
+        <p>En la actualidad hay discrepancia en dónde debe ponerse la raíz del árbol de Eukarya. La posibilidad más aceptada es situarlo entre o próximo a los excavados, que serían el grupo basal de los eucariontes.</p>
+    </div>
+    <ul id="ul4">
+        <li>Evolución eucariota unicelular y origen de las algas por endosimbiosis seriada.- A: ancestro arqueano anaerobio, B: origen del núcleo celular por invaginaciones de la membrana, C: proteobacteria aerobia, D: origen eucariota por endosimbiosis, E: bacteria fotosintética oxigénica, F: origen de la primera alga (Primoplantae) por endosimbiosis primaria entre un protozoo fagótrofo y una cianobacteria, G: origen de un alga cromofita por endosimbiosis secundaria con un alga roja, H: pérdida secundaria de cloroplastos en ciertos protistas, I: endosimbiosis terciaria de ciertos dinoflagelados con un alga cromofita.</li>
+    </ul>
+    <h6 id="h10">
+        Evolución pluricelular
+    </h6>
+    <div id="texto11">
+        <p>Durante la primera parte de su historia los eucariontes permanecieron unicelulares. A partir del período Ediacárico los pluricelulares comienzan a profilerar, aunque el proceso con seguridad comenzó bastante antes. Los organismos unicelulares de vida colonial comenzaron a cumplir funciones específicas en una zona del colectivo. Se formaron así los primeros tejidos y órganos. La pluricelularidad se desarrolló independientemente en varios grupos de eucariontes: plantas, hongos, animales, algas pardas y algas rojas. A pesar de su pluricelularidad, estos dos últimos grupos se siguen clasificando en el reino Protista.</p>
+        <p>Las algas verdes, las primeras plantas, se desarrollaron para formar las primeras hojas. En el Silúrico surgen las primeras plantas terrestres y de ellas las plantas vasculares o cormófitas.</p>
+    </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Plagiomnium_affine_laminazellen.jpeg/360px-Plagiomnium_affine_laminazellen.jpeg" alt="Evoluciónpluricelular" id="imagen8">
+    <div id="texto12">
+        <p>Los hongos unicelulares constituyeron filas de células o hifas que agrupadas se convirtieron en organismos pluricelulares absortivos con un marcado micelio. Inicialmente, los hongos fueron acuáticos y probablemente en el período Silúrico apareció el primer hongo terrestre, justo después de la aparición de las primeras plantas terrestres. Estudios moleculares sugieren que los hongos están más relacionados con los animales que con las plantas.</p>
+        <p>El reino animal comenzó con organismos similares a los actuales poríferos que carecen de verdaderos tejidos. Posteriormente se diversifican para dar lugar a los distintos grupos de invertebrados y vertebrados.</p>
+    </div>
+    <a href="index.html" id="a1">Haga click aqui para regresar a la pagina de animalia.</a>
+</body>
+</html>
