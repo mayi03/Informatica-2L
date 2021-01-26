@@ -26,7 +26,6 @@ let carro4 = {
     Kilometraje: 70.000,
     Kpg: 35
 }
-
 let carros = [carro1, carro2, carro3, carro4]
 
 let conductor = {
