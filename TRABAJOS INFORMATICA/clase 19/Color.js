@@ -9,16 +9,12 @@ boton1.onclick = cambiarColor
 boton2.onclick = aparecerdesaparecer
 boton3.onclick = Segundos
 
-
+//Math.floor sacado de https://www.w3schools.com/js/js_random.asp
 function cambiarColor(){
-    if (parrafo1.style.color == "black")
-    {
-        parrafo1.style.color = "blue";
-    }
-    else
-    {
-        parrafo1.style.color = "rgb(156, 73, 34)"
-    }
+    let a = Math.floor(Math.random()*226)
+    let b = Math.floor(Math.random()*226)
+    let c = Math.floor(Math.random()*226)
+    parrafo1.style.color = `rgb(${a},${b},${c})`;
 }
 
 
