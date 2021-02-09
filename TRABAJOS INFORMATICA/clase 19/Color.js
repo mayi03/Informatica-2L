@@ -35,7 +35,7 @@ function aparecerdesaparecer()
 
 function Segundos (){
     parrafo3.style.display = "none"
-    setTimeout (ReAparecer , 1000);
+    setTimeout (ReAparecer , 3000);
 }
 function ReAparecer (){
     parrafo3.style.display = "block"
