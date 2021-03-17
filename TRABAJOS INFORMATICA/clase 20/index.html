@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {
-            width: 100%;
-            border: 10px rgb(0, 0, 0);
-            border-collapse: collapse;
+        table{
+            width: 60%;
+            border: 1px solid black;
         }
-        td,
-        th {
-            border: rgb(144, 109, 177) 2px;
-            padding: 10px;
+        th,td{
+            padding: 15px;
+            border: 1px solid black;
             text-align: center;
+        }
+        th{
+            background-color: rgb(120, 137, 167);
         }
     </style>
 </head>
@@ -29,11 +30,12 @@
         <input type="date" id="entrega" name="entregaTarea" min="2021-01-01" max="2021-12-31">
         <input type="submit">
     </form>
-    <table id="tareas" 
-        style="width: 100%;
-            border: 10px rgb(0, 0, 0);
-            border-collapse: collapse;">
-    </table>
+    <form action=""id="formularioDelete">
+        Nombre materia a borrar:
+        <input type="text"name="materia">
+        <input type="submit">
+    </form>
+    <table id="tareas"></table>
     <script src="tareas.js"></script>
 </body>
 </html>
