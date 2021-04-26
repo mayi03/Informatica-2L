@@ -18,10 +18,13 @@ function dibujarPeon (xC,yC,r){
     ctx.stroke()
     ctx.fill()
 }
-for(let x = 0;x < 430; x = x+55){
+for(let x = 0;x < 430; x = x+60){
     dibujarPeon(x,60,20)
 }
 
-for(let x = 0;x < 430; x = x+55){
+ctx.strokeStyle = "rgb(0,0,0)"
+ctx.fillStyle = "rgb(255,255,255)"
+ctx.lineWidth=2
+for(let x = 0;x < 430; x = x+60){
     dibujarPeon(x,300,20)
 }
