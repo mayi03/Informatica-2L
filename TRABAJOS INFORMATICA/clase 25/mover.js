@@ -19,18 +19,22 @@ function dibujarPeon (xC,yC,r,t,color){
 
 }
 
-let y = 0;
-let vY = 200; // velocidad en px/s
+let x1 = 0
+let vX1 = 40; // velocidad en px/s
 let dT = 30; // en milisegundo
 function moverPeón(){
     ctx.clearRect(0,0,500,700)
-    let dY = (dT/1000) * vY; // desplazamiento
-    y = y + dY; // se cambia el valor de la x
-    dibujarPeon(250,y,40,40,"blue")
+    let dX1 = (dT/1000)*vX1; // desplazamiento
+    x1 = x1 + dX1; // se cambia el valor de la x
+    dibujarPeon(x1,250,40,40,"pink")
 }
 
 
 // se debe ejecutar la función cada dT milisegundo
 
-window.setInterval(moverPeón, dT);
+window.setInterval(moverPeón, dT)
+
+
+
+
 

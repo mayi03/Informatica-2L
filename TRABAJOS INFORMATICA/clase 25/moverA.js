@@ -26,11 +26,10 @@ function moverPeón(){
     ctx.clearRect(0,0,500,700)
     let dY = (dT/1000) * vY; // desplazamiento
     y = y + dY; // se cambia el valor de la x
-    dibujarPeon(250,y,40,40,"blue")
+    dibujarPeon(250,y,40,40,"purple")
 }
 
 
 // se debe ejecutar la función cada dT milisegundo
 
 window.setInterval(moverPeón, dT);
-
