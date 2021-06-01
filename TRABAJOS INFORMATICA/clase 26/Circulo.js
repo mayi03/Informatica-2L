@@ -16,7 +16,7 @@ function dibujarCirculo (xC,yC,r,color){
 
 let x = 250 
 let y = 0;
-let r = 30
+let r = 20
 let color = "red";
 let vY = 10; // velocidad en px/s
 let dT = 30; // en milisegundo
