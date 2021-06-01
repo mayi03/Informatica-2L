@@ -1,36 +1,59 @@
 let canvas = document.querySelector("#miCanvas")
 
+// escoger el contexto, en este caso el contexto 2d
 let ctx = canvas.getContext("2d")
-ctx.strokeStyle = "rgb(0,0,0)"
-ctx.fillStyle = "rgb(0,0,0)"
 
-//Dibujo peón negro
-function dibujarPeon (xC,yC,r,t,color){
-    ctx.fillStyle = color
-    ctx.beginPath()
-    ctx.moveTo(xC,yC)
-    ctx.arc(xC+t,yC,r,Math.PI,0)
-    ctx.moveTo(xC+t,yC-t)
-    ctx.arc(xC+t,yC-(t+5),r/2,-Math.PI,Math.PI)
-    ctx.moveTo(xC+t,yC-t*2)
-    ctx.arc(xC+t,yC-(t+5)-r/1.5,r/4,Math.PI,-Math.PI)
-    ctx.stroke()
-    ctx.fill()
-
+function dibujarBoton(xC, yC, r){
+    // dibujo el circulo
+    ctx.beginPath();
+    ctx.strokeStyle = 'blue';
+    ctx.fillStyle = 'blue';
+    ctx.arc(xC, yC, r, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.fill();
+    
+    // dibujo el cuadrado
+    ctx.strokeStyle = 'black';
+    ctx.beginPath();
+    ctx.strokeRect(xC-r, yC-r, 2*r, 2*r);
 }
 
-let y = 0;
-let vY = 200; // velocidad en px/s
-let dT = 30; // en milisegundo
-function moverPeón(){
-    ctx.clearRect(0,0,500,700)
-    let dY = (dT/1000) * vY; // desplazamiento
-    y = y + dY; // se cambia el valor de la x
-    dibujarPeon(250,y,40,40,"blue")
+let x = 0;
+let y = 200;
+
+let vX = 10;// en px/s
+let dT = 30;
+
+function moverYDibujar(){
+    ctx.clearRect(0,0, 600, 400);
+    let dX = dT/1000 *vX
+    x = x + dX;
+    dibujarBoton(x, y, 10);
+}
+
+function arrancarOParar(){
+    if (vX > 0){
+        vX = 0;
+    }
+    else{
+        vX = 10;
+    }
+}
+
+window.setInterval(moverYDibujar, dT);
+
+// Quiero que arranque o pare cuando presiones la tecla espacio.
+// Para hacer esto se debe usar un event listener.
+
+window.onkeyup = function(event){
+    //La función que se ejecuta cuando el evento ocurre puede resivir un argumentoy este tienen los detalles del argumento.
+    console.log(event.code)
+    if(event.code == "Space"){
+        arrancarOParar();
+    }
+    
 }
 
 
-// se debe ejecutar la función cada dT milisegundo
 
-window.setInterval(moverPeón, dT);
 
